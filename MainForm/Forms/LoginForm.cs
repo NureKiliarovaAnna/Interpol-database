@@ -19,7 +19,6 @@ namespace MainForm.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // Перевірка логіну та паролю
             if (txtUsername.Text == "admin" && txtPassword.Text == "password")
             {
                 MainForm mainForm = new MainForm();

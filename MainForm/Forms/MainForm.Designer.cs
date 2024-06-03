@@ -36,45 +36,56 @@ namespace MainForm
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сохранитькакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.печатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.предварительныйпросмотрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отменадействияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отменадействияToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.вырезатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.копироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вставкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.выделитьвсеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сервисToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.параметрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.содержаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.индексToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поискToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.опрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.btnForward = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnAccount = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnHome = new System.Windows.Forms.LinkLabel();
             this.pnlFilters = new System.Windows.Forms.Panel();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtAgeToFilter = new System.Windows.Forms.TextBox();
+            this.txtHeightToFilter = new System.Windows.Forms.TextBox();
+            this.txtAgeFromFilter = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtCrimePlaceFilter = new System.Windows.Forms.TextBox();
+            this.dtpCrimeDateFilter = new System.Windows.Forms.DateTimePicker();
+            this.cmbCrimeTypeFilter = new System.Windows.Forms.ComboBox();
+            this.cmbEyeColorFilter = new System.Windows.Forms.ComboBox();
+            this.cmbHairColorFilter = new System.Windows.Forms.ComboBox();
+            this.txtHeightFromFilter = new System.Windows.Forms.TextBox();
+            this.txtCitizenshipFilter = new System.Windows.Forms.TextBox();
+            this.txtBirthPlaceFilter = new System.Windows.Forms.TextBox();
+            this.cmbGenderFilter = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNicknameFilter = new System.Windows.Forms.TextBox();
+            this.txtLastNameFilter = new System.Windows.Forms.TextBox();
+            this.txtFirstNameFilter = new System.Windows.Forms.TextBox();
             this.lstCriminals = new System.Windows.Forms.ListBox();
+            this.AddCriminalForm = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.pnlTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAccount)).BeginInit();
+            this.pnlFilters.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -86,7 +97,7 @@ namespace MainForm
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(702, 92);
+            this.panel1.Size = new System.Drawing.Size(782, 92);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -107,12 +118,10 @@ namespace MainForm
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
-            this.правкаToolStripMenuItem,
-            this.сервисToolStripMenuItem,
             this.справкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(702, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(782, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -130,68 +139,18 @@ namespace MainForm
             this.toolStripSeparator2,
             this.выходToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 26);
-            this.файлToolStripMenuItem.Text = "&Файл";
-            // 
-            // создатьToolStripMenuItem
-            // 
-            this.создатьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("создатьToolStripMenuItem.Image")));
-            this.создатьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
-            this.создатьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.создатьToolStripMenuItem.Text = "&Создать";
-            // 
-            // открытьToolStripMenuItem
-            // 
-            this.открытьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("открытьToolStripMenuItem.Image")));
-            this.открытьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.открытьToolStripMenuItem.Text = "&Открыть";
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.файлToolStripMenuItem.Text = "&File";
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
             this.toolStripSeparator.Size = new System.Drawing.Size(291, 6);
             // 
-            // сохранитьToolStripMenuItem
-            // 
-            this.сохранитьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("сохранитьToolStripMenuItem.Image")));
-            this.сохранитьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.сохранитьToolStripMenuItem.Text = "&Сохранить";
-            // 
-            // сохранитькакToolStripMenuItem
-            // 
-            this.сохранитькакToolStripMenuItem.Name = "сохранитькакToolStripMenuItem";
-            this.сохранитькакToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.сохранитькакToolStripMenuItem.Text = "Сохранить &как";
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(291, 6);
-            // 
-            // печатьToolStripMenuItem
-            // 
-            this.печатьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("печатьToolStripMenuItem.Image")));
-            this.печатьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.печатьToolStripMenuItem.Name = "печатьToolStripMenuItem";
-            this.печатьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.печатьToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.печатьToolStripMenuItem.Text = "&Печать";
-            // 
-            // предварительныйпросмотрToolStripMenuItem
-            // 
-            this.предварительныйпросмотрToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("предварительныйпросмотрToolStripMenuItem.Image")));
-            this.предварительныйпросмотрToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.предварительныйпросмотрToolStripMenuItem.Name = "предварительныйпросмотрToolStripMenuItem";
-            this.предварительныйпросмотрToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.предварительныйпросмотрToolStripMenuItem.Text = "Предварительный про&смотр";
             // 
             // toolStripSeparator2
             // 
@@ -202,112 +161,16 @@ namespace MainForm
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.выходToolStripMenuItem.Text = "Вы&ход";
-            // 
-            // правкаToolStripMenuItem
-            // 
-            this.правкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.отменадействияToolStripMenuItem,
-            this.отменадействияToolStripMenuItem1,
-            this.toolStripSeparator3,
-            this.вырезатьToolStripMenuItem,
-            this.копироватьToolStripMenuItem,
-            this.вставкаToolStripMenuItem,
-            this.toolStripSeparator4,
-            this.выделитьвсеToolStripMenuItem});
-            this.правкаToolStripMenuItem.Name = "правкаToolStripMenuItem";
-            this.правкаToolStripMenuItem.Size = new System.Drawing.Size(74, 26);
-            this.правкаToolStripMenuItem.Text = "&Правка";
-            // 
-            // отменадействияToolStripMenuItem
-            // 
-            this.отменадействияToolStripMenuItem.Name = "отменадействияToolStripMenuItem";
-            this.отменадействияToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.отменадействияToolStripMenuItem.Size = new System.Drawing.Size(263, 26);
-            this.отменадействияToolStripMenuItem.Text = "&Отмена действия";
-            // 
-            // отменадействияToolStripMenuItem1
-            // 
-            this.отменадействияToolStripMenuItem1.Name = "отменадействияToolStripMenuItem1";
-            this.отменадействияToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.отменадействияToolStripMenuItem1.Size = new System.Drawing.Size(263, 26);
-            this.отменадействияToolStripMenuItem1.Text = "&Отмена действия";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(260, 6);
-            // 
-            // вырезатьToolStripMenuItem
-            // 
-            this.вырезатьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("вырезатьToolStripMenuItem.Image")));
-            this.вырезатьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.вырезатьToolStripMenuItem.Name = "вырезатьToolStripMenuItem";
-            this.вырезатьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.вырезатьToolStripMenuItem.Size = new System.Drawing.Size(263, 26);
-            this.вырезатьToolStripMenuItem.Text = "Вырезат&ь";
-            // 
-            // копироватьToolStripMenuItem
-            // 
-            this.копироватьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("копироватьToolStripMenuItem.Image")));
-            this.копироватьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
-            this.копироватьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.копироватьToolStripMenuItem.Size = new System.Drawing.Size(263, 26);
-            this.копироватьToolStripMenuItem.Text = "&Копировать";
-            // 
-            // вставкаToolStripMenuItem
-            // 
-            this.вставкаToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("вставкаToolStripMenuItem.Image")));
-            this.вставкаToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.вставкаToolStripMenuItem.Name = "вставкаToolStripMenuItem";
-            this.вставкаToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.вставкаToolStripMenuItem.Size = new System.Drawing.Size(263, 26);
-            this.вставкаToolStripMenuItem.Text = "Вст&авка";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(260, 6);
-            // 
-            // выделитьвсеToolStripMenuItem
-            // 
-            this.выделитьвсеToolStripMenuItem.Name = "выделитьвсеToolStripMenuItem";
-            this.выделитьвсеToolStripMenuItem.Size = new System.Drawing.Size(263, 26);
-            this.выделитьвсеToolStripMenuItem.Text = "Выделить &все";
-            // 
-            // сервисToolStripMenuItem
-            // 
-            this.сервисToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.настройкиToolStripMenuItem,
-            this.параметрыToolStripMenuItem});
-            this.сервисToolStripMenuItem.Name = "сервисToolStripMenuItem";
-            this.сервисToolStripMenuItem.Size = new System.Drawing.Size(73, 26);
-            this.сервисToolStripMenuItem.Text = "&Сервис";
-            // 
-            // настройкиToolStripMenuItem
-            // 
-            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
-            this.настройкиToolStripMenuItem.Text = "&Настройки";
-            // 
-            // параметрыToolStripMenuItem
-            // 
-            this.параметрыToolStripMenuItem.Name = "параметрыToolStripMenuItem";
-            this.параметрыToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
-            this.параметрыToolStripMenuItem.Text = "&Параметры";
+            this.выходToolStripMenuItem.Text = "Ви&хід";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
             // справкаToolStripMenuItem
             // 
             this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.содержаниеToolStripMenuItem,
-            this.индексToolStripMenuItem,
-            this.поискToolStripMenuItem,
-            this.toolStripSeparator5,
             this.опрограммеToolStripMenuItem});
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(81, 26);
-            this.справкаToolStripMenuItem.Text = "Спра&вка";
+            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.справкаToolStripMenuItem.Text = "He&lp";
             // 
             // содержаниеToolStripMenuItem
             // 
@@ -327,121 +190,317 @@ namespace MainForm
             this.поискToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.поискToolStripMenuItem.Text = "&Поиск";
             // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(193, 6);
-            // 
-            // опрограммеToolStripMenuItem
-            // 
-            this.опрограммеToolStripMenuItem.Name = "опрограммеToolStripMenuItem";
-            this.опрограммеToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
-            this.опрограммеToolStripMenuItem.Text = "&О программе...";
-            // 
-            // pnlTop
-            // 
-            this.pnlTop.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pnlTop.Controls.Add(this.btnForward);
-            this.pnlTop.Controls.Add(this.btnBack);
-            this.pnlTop.Controls.Add(this.btnAccount);
-            this.pnlTop.Controls.Add(this.btnHome);
-            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTop.Location = new System.Drawing.Point(0, 92);
-            this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(702, 39);
-            this.pnlTop.TabIndex = 1;
-            // 
-            // btnForward
-            // 
-            this.btnForward.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnForward.Location = new System.Drawing.Point(41, 3);
-            this.btnForward.Name = "btnForward";
-            this.btnForward.Size = new System.Drawing.Size(37, 33);
-            this.btnForward.TabIndex = 4;
-            this.btnForward.Text = ">";
-            this.btnForward.UseVisualStyleBackColor = true;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBack.Location = new System.Drawing.Point(6, 3);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(37, 33);
-            this.btnBack.TabIndex = 3;
-            this.btnBack.Text = "<";
-            this.btnBack.UseVisualStyleBackColor = true;
-            // 
-            // btnAccount
-            // 
-            this.btnAccount.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnAccount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAccount.Image = global::MainForm.Properties.Resources._8666609_user_icon;
-            this.btnAccount.Location = new System.Drawing.Point(642, 2);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(35, 35);
-            this.btnAccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnAccount.TabIndex = 2;
-            this.btnAccount.TabStop = false;
-            // 
             // btnHome
             // 
             this.btnHome.ActiveLinkColor = System.Drawing.Color.Black;
             this.btnHome.AutoSize = true;
             this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.DisabledLinkColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnHome.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.DisabledLinkColor = System.Drawing.Color.Black;
+            this.btnHome.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnHome.ForeColor = System.Drawing.Color.Black;
+            this.btnHome.LinkArea = new System.Windows.Forms.LinkArea(0, 0);
             this.btnHome.LinkColor = System.Drawing.Color.Black;
-            this.btnHome.Location = new System.Drawing.Point(96, 9);
+            this.btnHome.Location = new System.Drawing.Point(19, 10);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(94, 22);
+            this.btnHome.Size = new System.Drawing.Size(49, 20);
             this.btnHome.TabIndex = 0;
-            this.btnHome.TabStop = true;
-            this.btnHome.Text = "Головна";
-            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Text = "HOME";
             this.btnHome.VisitedLinkColor = System.Drawing.Color.Black;
+            this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
-            // pnlFilters
+            // btnSearch
             // 
-            this.pnlFilters.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnlFilters.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlFilters.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlFilters.Location = new System.Drawing.Point(0, 131);
-            this.pnlFilters.Name = "pnlFilters";
-            this.pnlFilters.Size = new System.Drawing.Size(270, 362);
-            this.pnlFilters.TabIndex = 2;
+            this.btnSearch.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSearch.Location = new System.Drawing.Point(360, 521);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(110, 30);
+            this.btnSearch.TabIndex = 17;
+            this.btnSearch.Text = "Пошук";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(185, 521);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 30);
+            this.button1.TabIndex = 68;
+            this.button1.Text = "Очистити";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(306, 265);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(29, 20);
+            this.label18.TabIndex = 67;
+            this.label18.Text = "до";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(202, 265);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(39, 20);
+            this.label14.TabIndex = 66;
+            this.label14.Text = "від";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(306, 160);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(29, 20);
+            this.label13.TabIndex = 65;
+            this.label13.Text = "до";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(202, 160);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(39, 20);
+            this.label8.TabIndex = 64;
+            this.label8.Text = "від";
+            // 
+            // txtAgeToFilter
+            // 
+            this.txtAgeToFilter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtAgeToFilter.Location = new System.Drawing.Point(341, 157);
+            this.txtAgeToFilter.Name = "txtAgeToFilter";
+            this.txtAgeToFilter.Size = new System.Drawing.Size(53, 27);
+            this.txtAgeToFilter.TabIndex = 7;
+            // 
+            // txtHeightToFilter
+            // 
+            this.txtHeightToFilter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtHeightToFilter.Location = new System.Drawing.Point(341, 262);
+            this.txtHeightToFilter.Name = "txtHeightToFilter";
+            this.txtHeightToFilter.Size = new System.Drawing.Size(53, 27);
+            this.txtHeightToFilter.TabIndex = 11;
+            // 
+            // txtAgeFromFilter
+            // 
+            this.txtAgeFromFilter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtAgeFromFilter.Location = new System.Drawing.Point(247, 157);
+            this.txtAgeFromFilter.Name = "txtAgeFromFilter";
+            this.txtAgeFromFilter.Size = new System.Drawing.Size(53, 27);
+            this.txtAgeFromFilter.TabIndex = 6;
+            // 
+            // txtCrimePlaceFilter
+            // 
+            this.txtCrimePlaceFilter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtCrimePlaceFilter.Location = new System.Drawing.Point(185, 440);
+            this.txtCrimePlaceFilter.Name = "txtCrimePlaceFilter";
+            this.txtCrimePlaceFilter.Size = new System.Drawing.Size(285, 27);
+            this.txtCrimePlaceFilter.TabIndex = 16;
+            // 
+            // dtpCrimeDateFilter
+            // 
+            this.dtpCrimeDateFilter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dtpCrimeDateFilter.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpCrimeDateFilter.Location = new System.Drawing.Point(185, 405);
+            this.dtpCrimeDateFilter.Name = "dtpCrimeDateFilter";
+            this.dtpCrimeDateFilter.ShowCheckBox = true;
+            this.dtpCrimeDateFilter.Size = new System.Drawing.Size(285, 27);
+            this.dtpCrimeDateFilter.TabIndex = 15;
+            // 
+            // cmbCrimeTypeFilter
+            // 
+            this.cmbCrimeTypeFilter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cmbCrimeTypeFilter.FormattingEnabled = true;
+            this.cmbCrimeTypeFilter.Items.AddRange(new object[] {
+            "вбивство, напад",
+            "згвалтування",
+            "крадіжка",
+            "підробка",
+            "вимагання",
+            "викрадення людей",
+            "тероризм",
+            "корупція",
+            "лжесвідчення",
+            "шахрайство",
+            "екологічний",
+            "комп\'ютерний"});
+            this.cmbCrimeTypeFilter.Location = new System.Drawing.Point(185, 369);
+            this.cmbCrimeTypeFilter.Name = "cmbCrimeTypeFilter";
+            this.cmbCrimeTypeFilter.Size = new System.Drawing.Size(285, 28);
+            this.cmbCrimeTypeFilter.TabIndex = 14;
+            // 
+            // cmbEyeColorFilter
+            // 
+            this.cmbEyeColorFilter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cmbEyeColorFilter.FormattingEnabled = true;
+            this.cmbEyeColorFilter.Items.AddRange(new object[] {
+            "Карий",
+            "Сірий",
+            "Зелений",
+            "Блакитний",
+            "Чорний"});
+            this.cmbEyeColorFilter.Location = new System.Drawing.Point(185, 333);
+            this.cmbEyeColorFilter.Name = "cmbEyeColorFilter";
+            this.cmbEyeColorFilter.Size = new System.Drawing.Size(285, 28);
+            this.cmbEyeColorFilter.TabIndex = 13;
+            // 
+            // cmbHairColorFilter
+            // 
+            this.cmbHairColorFilter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cmbHairColorFilter.FormattingEnabled = true;
+            this.cmbHairColorFilter.Items.AddRange(new object[] {
+            "Чорний",
+            "Блонд",
+            "Рудий",
+            "Шатен",
+            "Сірий(сивий)",
+            "Каштановий"});
+            this.cmbHairColorFilter.Location = new System.Drawing.Point(185, 297);
+            this.cmbHairColorFilter.Name = "cmbHairColorFilter";
+            this.cmbHairColorFilter.Size = new System.Drawing.Size(285, 28);
+            this.cmbHairColorFilter.TabIndex = 12;
+            // 
+            // txtHeightFromFilter
+            // 
+            this.txtHeightFromFilter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtHeightFromFilter.Location = new System.Drawing.Point(247, 262);
+            this.txtHeightFromFilter.Name = "txtHeightFromFilter";
+            this.txtHeightFromFilter.Size = new System.Drawing.Size(53, 27);
+            this.txtHeightFromFilter.TabIndex = 10;
+            // 
+            // txtCitizenshipFilter
+            // 
+            this.txtCitizenshipFilter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtCitizenshipFilter.Location = new System.Drawing.Point(185, 227);
+            this.txtCitizenshipFilter.Name = "txtCitizenshipFilter";
+            this.txtCitizenshipFilter.Size = new System.Drawing.Size(285, 27);
+            this.txtCitizenshipFilter.TabIndex = 9;
+            // 
+            // txtBirthPlaceFilter
+            // 
+            this.txtBirthPlaceFilter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtBirthPlaceFilter.Location = new System.Drawing.Point(185, 192);
+            this.txtBirthPlaceFilter.Name = "txtBirthPlaceFilter";
+            this.txtBirthPlaceFilter.Size = new System.Drawing.Size(285, 27);
+            this.txtBirthPlaceFilter.TabIndex = 8;
+            // 
+            // cmbGenderFilter
+            // 
+            this.cmbGenderFilter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cmbGenderFilter.FormattingEnabled = true;
+            this.cmbGenderFilter.Items.AddRange(new object[] {
+            "чоловіча",
+            "жіноча"});
+            this.cmbGenderFilter.Location = new System.Drawing.Point(185, 121);
+            this.cmbGenderFilter.Name = "cmbGenderFilter";
+            this.cmbGenderFilter.Size = new System.Drawing.Size(285, 28);
+            this.cmbGenderFilter.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(100, 89);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 20);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Кличка";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(80, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 20);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Прізвище";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(120, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 20);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Ім\'я";
+            // 
+            // txtNicknameFilter
+            // 
+            this.txtNicknameFilter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtNicknameFilter.Location = new System.Drawing.Point(185, 86);
+            this.txtNicknameFilter.Name = "txtNicknameFilter";
+            this.txtNicknameFilter.Size = new System.Drawing.Size(285, 27);
+            this.txtNicknameFilter.TabIndex = 4;
+            // 
+            // txtLastNameFilter
+            // 
+            this.txtLastNameFilter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtLastNameFilter.Location = new System.Drawing.Point(185, 51);
+            this.txtLastNameFilter.Name = "txtLastNameFilter";
+            this.txtLastNameFilter.Size = new System.Drawing.Size(285, 27);
+            this.txtLastNameFilter.TabIndex = 3;
+            // 
+            // txtFirstNameFilter
+            // 
+            this.txtFirstNameFilter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtFirstNameFilter.Location = new System.Drawing.Point(185, 16);
+            this.txtFirstNameFilter.Name = "txtFirstNameFilter";
+            this.txtFirstNameFilter.Size = new System.Drawing.Size(285, 27);
+            this.txtFirstNameFilter.TabIndex = 2;
             // 
             // lstCriminals
             // 
+            this.lstCriminals.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstCriminals.BackColor = System.Drawing.SystemColors.Control;
-            this.lstCriminals.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstCriminals.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lstCriminals.FormattingEnabled = true;
             this.lstCriminals.ItemHeight = 20;
-            this.lstCriminals.Location = new System.Drawing.Point(270, 131);
+            this.lstCriminals.Location = new System.Drawing.Point(485, 131);
             this.lstCriminals.Name = "lstCriminals";
-            this.lstCriminals.Size = new System.Drawing.Size(432, 362);
-            this.lstCriminals.TabIndex = 3;
+            this.lstCriminals.Size = new System.Drawing.Size(297, 504);
+            this.lstCriminals.TabIndex = 18;
+            this.lstCriminals.DoubleClick += new System.EventHandler(this.lstCriminals_DoubleClick);
+            // 
+            // AddCriminalForm
+            // 
+            this.AddCriminalForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddCriminalForm.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddCriminalForm.Location = new System.Drawing.Point(656, 651);
+            this.AddCriminalForm.Name = "AddCriminalForm";
+            this.AddCriminalForm.Size = new System.Drawing.Size(110, 30);
+            this.AddCriminalForm.TabIndex = 19;
+            this.AddCriminalForm.Text = "Додати";
+            this.AddCriminalForm.UseVisualStyleBackColor = true;
+            this.AddCriminalForm.Click += new System.EventHandler(this.btnAddCriminal_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 493);
+            this.ClientSize = new System.Drawing.Size(782, 693);
+            this.Controls.Add(this.AddCriminalForm);
             this.Controls.Add(this.lstCriminals);
             this.Controls.Add(this.pnlFilters);
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(720, 540);
+            this.MinimumSize = new System.Drawing.Size(800, 740);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Головна";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAccount)).EndInit();
+            this.pnlFilters.ResumeLayout(false);
+            this.pnlFilters.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -454,39 +513,50 @@ namespace MainForm
         private System.Windows.Forms.PictureBox btnAccount;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem файлToolStripMenuItem;
-        private ToolStripMenuItem создатьToolStripMenuItem;
-        private ToolStripMenuItem открытьToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator;
-        private ToolStripMenuItem сохранитьToolStripMenuItem;
-        private ToolStripMenuItem сохранитькакToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
-        private ToolStripMenuItem печатьToolStripMenuItem;
-        private ToolStripMenuItem предварительныйпросмотрToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripMenuItem выходToolStripMenuItem;
-        private ToolStripMenuItem правкаToolStripMenuItem;
-        private ToolStripMenuItem отменадействияToolStripMenuItem;
-        private ToolStripMenuItem отменадействияToolStripMenuItem1;
-        private ToolStripSeparator toolStripSeparator3;
-        private ToolStripMenuItem вырезатьToolStripMenuItem;
-        private ToolStripMenuItem копироватьToolStripMenuItem;
-        private ToolStripMenuItem вставкаToolStripMenuItem;
-        private ToolStripSeparator toolStripSeparator4;
-        private ToolStripMenuItem выделитьвсеToolStripMenuItem;
-        private ToolStripMenuItem сервисToolStripMenuItem;
-        private ToolStripMenuItem настройкиToolStripMenuItem;
-        private ToolStripMenuItem параметрыToolStripMenuItem;
         private ToolStripMenuItem справкаToolStripMenuItem;
-        private ToolStripMenuItem содержаниеToolStripMenuItem;
-        private ToolStripMenuItem индексToolStripMenuItem;
-        private ToolStripMenuItem поискToolStripMenuItem;
-        private ToolStripSeparator toolStripSeparator5;
         private ToolStripMenuItem опрограммеToolStripMenuItem;
-        private Button btnBack;
-        private LinkLabel btnHome;
-        private Button btnForward;
         private Panel pnlFilters;
         private ListBox lstCriminals;
+        private Button AddCriminalForm;
+        private Button btnSearch;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private TextBox txtNicknameFilter;
+        private TextBox txtLastNameFilter;
+        private TextBox txtFirstNameFilter;
+        private Label label17;
+        private Label label16;
+        private Label label15;
+        private Label label12;
+        private Label label11;
+        private Label label10;
+        private Label label9;
+        private Label label7;
+        private Label label6;
+        private Label label5;
+        private TextBox txtCrimePlaceFilter;
+        private DateTimePicker dtpCrimeDateFilter;
+        private ComboBox cmbCrimeTypeFilter;
+        private ComboBox cmbEyeColorFilter;
+        private ComboBox cmbHairColorFilter;
+        private TextBox txtHeightFromFilter;
+        private TextBox txtCitizenshipFilter;
+        private TextBox txtBirthPlaceFilter;
+        private ComboBox cmbGenderFilter;
+        private TextBox txtAgeToFilter;
+        private TextBox txtHeightToFilter;
+        private TextBox txtAgeFromFilter;
+        private Label label18;
+        private Label label14;
+        private Label label13;
+        private Label label8;
+        private LinkLabel btnHome;
+        private LinkLabel linkLabel1;
+        private Button button1;
     }
 }
-
