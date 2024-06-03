@@ -73,6 +73,16 @@ namespace MainForm.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8666758_unlock_lock_icon {
+            get {
+                object obj = ResourceManager.GetObject("8666758_unlock_lock_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap interpol_logo_blue_0 {
             get {
                 object obj = ResourceManager.GetObject("interpol_logo_blue_0", resourceCulture);

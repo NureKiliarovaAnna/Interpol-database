@@ -35,9 +35,16 @@ namespace MainForm
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.проПрограмуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.увійтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.додатиЗлочинцяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.видалитиЗлочинцяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +54,7 @@ namespace MainForm
             this.btnHome = new System.Windows.Forms.LinkLabel();
             this.pnlFilters = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -117,78 +124,141 @@ namespace MainForm
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.файлToolStripMenuItem,
-            this.справкаToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(782, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Text = "&File";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Text = "&Вийти";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.проПрограмуToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.helpToolStripMenuItem.Text = "He&lp";
+            // 
+            // проПрограмуToolStripMenuItem
+            // 
+            this.проПрограмуToolStripMenuItem.Name = "проПрограмуToolStripMenuItem";
+            this.проПрограмуToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.проПрограмуToolStripMenuItem.Text = "&Про програму...";
+            this.проПрограмуToolStripMenuItem.Click += new System.EventHandler(this.проПрограмуToolStripMenuItem_Click);
+            // 
             // файлToolStripMenuItem
             // 
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.создатьToolStripMenuItem,
-            this.открытьToolStripMenuItem,
+            this.увійтиToolStripMenuItem,
             this.toolStripSeparator,
-            this.сохранитьToolStripMenuItem,
-            this.сохранитькакToolStripMenuItem,
+            this.додатиЗлочинцяToolStripMenuItem,
             this.toolStripSeparator1,
-            this.печатьToolStripMenuItem,
-            this.предварительныйпросмотрToolStripMenuItem,
+            this.видалитиЗлочинцяToolStripMenuItem,
             this.toolStripSeparator2,
             this.выходToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
             this.файлToolStripMenuItem.Text = "&File";
+            // 
+            // увійтиToolStripMenuItem
+            // 
+            this.увійтиToolStripMenuItem.Name = "увійтиToolStripMenuItem";
+            this.увійтиToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.увійтиToolStripMenuItem.Text = "Увійти";
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(291, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(226, 6);
+            // 
+            // додатиЗлочинцяToolStripMenuItem
+            // 
+            this.додатиЗлочинцяToolStripMenuItem.Name = "додатиЗлочинцяToolStripMenuItem";
+            this.додатиЗлочинцяToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.додатиЗлочинцяToolStripMenuItem.Text = "Додати злочинця";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(291, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(226, 6);
+            // 
+            // видалитиЗлочинцяToolStripMenuItem
+            // 
+            this.видалитиЗлочинцяToolStripMenuItem.Name = "видалитиЗлочинцяToolStripMenuItem";
+            this.видалитиЗлочинцяToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.видалитиЗлочинцяToolStripMenuItem.Text = "Видалити злочинця";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(291, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(226, 6);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
             this.выходToolStripMenuItem.Text = "Ви&хід";
-            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // справкаToolStripMenuItem
             // 
             this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.опрограммеToolStripMenuItem});
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
             this.справкаToolStripMenuItem.Text = "He&lp";
             // 
-            // содержаниеToolStripMenuItem
+            // опрограммеToolStripMenuItem
             // 
-            this.содержаниеToolStripMenuItem.Name = "содержаниеToolStripMenuItem";
-            this.содержаниеToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
-            this.содержаниеToolStripMenuItem.Text = "&Содержание";
+            this.опрограммеToolStripMenuItem.Name = "опрограммеToolStripMenuItem";
+            this.опрограммеToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.опрограммеToolStripMenuItem.Text = "&Про програму...";
             // 
-            // индексToolStripMenuItem
+            // pnlTop
             // 
-            this.индексToolStripMenuItem.Name = "индексToolStripMenuItem";
-            this.индексToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
-            this.индексToolStripMenuItem.Text = "&Индекс";
+            this.pnlTop.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pnlTop.Controls.Add(this.linkLabel1);
+            this.pnlTop.Controls.Add(this.btnHome);
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTop.Location = new System.Drawing.Point(0, 92);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(782, 39);
+            this.pnlTop.TabIndex = 0;
             // 
-            // поискToolStripMenuItem
+            // linkLabel1
             // 
-            this.поискToolStripMenuItem.Name = "поискToolStripMenuItem";
-            this.поискToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
-            this.поискToolStripMenuItem.Text = "&Поиск";
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkLabel1.DisabledLinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.linkLabel1.ForeColor = System.Drawing.Color.Black;
+            this.linkLabel1.LinkArea = new System.Windows.Forms.LinkArea(0, 0);
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(691, 10);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(69, 20);
+            this.linkLabel1.TabIndex = 1;
+            this.linkLabel1.Text = "LogOut";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnHome
             // 
@@ -206,12 +276,57 @@ namespace MainForm
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "HOME";
             this.btnHome.VisitedLinkColor = System.Drawing.Color.Black;
-            this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // pnlFilters
+            // 
+            this.pnlFilters.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlFilters.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlFilters.Controls.Add(this.btnSearch);
+            this.pnlFilters.Controls.Add(this.btnClear);
+            this.pnlFilters.Controls.Add(this.label18);
+            this.pnlFilters.Controls.Add(this.label14);
+            this.pnlFilters.Controls.Add(this.label13);
+            this.pnlFilters.Controls.Add(this.label8);
+            this.pnlFilters.Controls.Add(this.txtAgeToFilter);
+            this.pnlFilters.Controls.Add(this.txtHeightToFilter);
+            this.pnlFilters.Controls.Add(this.txtAgeFromFilter);
+            this.pnlFilters.Controls.Add(this.label17);
+            this.pnlFilters.Controls.Add(this.label16);
+            this.pnlFilters.Controls.Add(this.label15);
+            this.pnlFilters.Controls.Add(this.label12);
+            this.pnlFilters.Controls.Add(this.label11);
+            this.pnlFilters.Controls.Add(this.label10);
+            this.pnlFilters.Controls.Add(this.label9);
+            this.pnlFilters.Controls.Add(this.label7);
+            this.pnlFilters.Controls.Add(this.label6);
+            this.pnlFilters.Controls.Add(this.label5);
+            this.pnlFilters.Controls.Add(this.txtCrimePlaceFilter);
+            this.pnlFilters.Controls.Add(this.dtpCrimeDateFilter);
+            this.pnlFilters.Controls.Add(this.cmbCrimeTypeFilter);
+            this.pnlFilters.Controls.Add(this.cmbEyeColorFilter);
+            this.pnlFilters.Controls.Add(this.cmbHairColorFilter);
+            this.pnlFilters.Controls.Add(this.txtHeightFromFilter);
+            this.pnlFilters.Controls.Add(this.txtCitizenshipFilter);
+            this.pnlFilters.Controls.Add(this.txtBirthPlaceFilter);
+            this.pnlFilters.Controls.Add(this.cmbGenderFilter);
+            this.pnlFilters.Controls.Add(this.label4);
+            this.pnlFilters.Controls.Add(this.label3);
+            this.pnlFilters.Controls.Add(this.label2);
+            this.pnlFilters.Controls.Add(this.txtNicknameFilter);
+            this.pnlFilters.Controls.Add(this.txtLastNameFilter);
+            this.pnlFilters.Controls.Add(this.txtFirstNameFilter);
+            this.pnlFilters.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlFilters.Location = new System.Drawing.Point(0, 130);
+            this.pnlFilters.Name = "pnlFilters";
+            this.pnlFilters.Size = new System.Drawing.Size(486, 573);
+            this.pnlFilters.TabIndex = 1;
             // 
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSearch.Location = new System.Drawing.Point(360, 521);
+            this.btnSearch.Location = new System.Drawing.Point(360, 489);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(110, 30);
             this.btnSearch.TabIndex = 17;
@@ -219,16 +334,16 @@ namespace MainForm
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // button1
+            // btnClear
             // 
-            this.button1.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(185, 521);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 30);
-            this.button1.TabIndex = 68;
-            this.button1.Text = "Очистити";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnClear.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnClear.Location = new System.Drawing.Point(185, 489);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(110, 30);
+            this.btnClear.TabIndex = 68;
+            this.btnClear.Text = "Очистити";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label18
             // 
@@ -290,6 +405,108 @@ namespace MainForm
             this.txtAgeFromFilter.Size = new System.Drawing.Size(53, 27);
             this.txtAgeFromFilter.TabIndex = 6;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.Location = new System.Drawing.Point(30, 440);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(139, 40);
+            this.label17.TabIndex = 60;
+            this.label17.Text = "Місце скоєння\r\nзлочину";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.Location = new System.Drawing.Point(40, 400);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(129, 40);
+            this.label16.TabIndex = 59;
+            this.label16.Text = "Дата скоєння\r\nзлочину";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.Location = new System.Drawing.Point(50, 372);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(119, 20);
+            this.label15.TabIndex = 58;
+            this.label15.Text = "Тип злочину";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(60, 337);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(109, 20);
+            this.label12.TabIndex = 55;
+            this.label12.Text = "Колір очей";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(30, 300);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(139, 20);
+            this.label11.TabIndex = 54;
+            this.label11.Text = "Колір волосся";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(110, 265);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(59, 20);
+            this.label10.TabIndex = 53;
+            this.label10.Text = "Зріст";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(40, 230);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(129, 20);
+            this.label9.TabIndex = 52;
+            this.label9.Text = "Громадянство";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(3, 195);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(169, 20);
+            this.label7.TabIndex = 50;
+            this.label7.Text = "Місце народження";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(130, 160);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 20);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "Вік";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(110, 124);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 20);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "Стать";
+            // 
             // txtCrimePlaceFilter
             // 
             this.txtCrimePlaceFilter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -313,12 +530,14 @@ namespace MainForm
             this.cmbCrimeTypeFilter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbCrimeTypeFilter.FormattingEnabled = true;
             this.cmbCrimeTypeFilter.Items.AddRange(new object[] {
-            "вбивство, напад",
+            "вбивство",
+            "напад",
             "згвалтування",
             "крадіжка",
             "підробка",
             "вимагання",
             "викрадення людей",
+            "торгівля людьми",
             "тероризм",
             "корупція",
             "лжесвідчення",
@@ -557,6 +776,13 @@ namespace MainForm
         private Label label8;
         private LinkLabel btnHome;
         private LinkLabel linkLabel1;
-        private Button button1;
+        private Button btnClear;
+        private ToolStripMenuItem увійтиToolStripMenuItem;
+        private ToolStripMenuItem додатиЗлочинцяToolStripMenuItem;
+        private ToolStripMenuItem видалитиЗлочинцяToolStripMenuItem;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem helpToolStripMenuItem;
+        private ToolStripMenuItem проПрограмуToolStripMenuItem;
     }
 }

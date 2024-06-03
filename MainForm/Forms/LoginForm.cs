@@ -15,6 +15,14 @@ namespace MainForm.Forms
         public LoginForm()
         {
             InitializeComponent();
+            btnLogin.Enabled = false;
+            txtUsername.TextChanged += new EventHandler(CheckLoginButtonState);
+            txtPassword.TextChanged += new EventHandler(CheckLoginButtonState);
+        }
+
+        private void CheckLoginButtonState(object sender, EventArgs e)
+        {
+            btnLogin.Enabled = !string.IsNullOrEmpty(txtUsername.Text) && !string.IsNullOrEmpty(txtPassword.Text);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -23,7 +31,7 @@ namespace MainForm.Forms
             {
                 MainForm mainForm = new MainForm();
                 mainForm.Show();
-                this.Hide();
+                Hide();
             }
             else
             {

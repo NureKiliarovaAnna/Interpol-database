@@ -6,36 +6,38 @@ using System.Threading.Tasks;
 
 namespace MainForm.Models
 {
+    [Serializable]
+
     public class InfoCriminal
     {
-        public string Name { get; set; }
-        public string Прізвище { get; set; }
-        public string Кличка { get; set; }
-        public string Стать { get; set; } // "жіноча", "чоловіча"
-        public DateTime Дата_народження { get; set; }
-        public string Місце_народження { get; set; }
-        public string Останнє_місце_проживання { get; set; }
-        public string Громадянство { get; set; }
-        public int Зріст { get; set; }
-        public string Колір_волосся { get; set; }
-        public string Колір_очей { get; set; }
-        public string Особливі_прикмети { get; set; }
-        public string Тип_повідомлення { get; set; }
-        public string Тип_злочину { get; set; }
-        public DateTime Дата_скоєння_злочину { get; set; }
-        public string Місце_скоєння_злочину { get; set; }
-        public string Судове_рішення { get; set; }
-        public bool Злочинні_угруповання { get; set; }
-        public List<InfoCriminal> Спільники { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Nickname { get; set; }
+        public string Gender { get; set; }
+        public DateTime BirthDate { get; set; }
+        public string BirthPlace { get; set; }
+        public string LastResidence { get; set; }
+        public string Citizenship { get; set; }
+        public int Height { get; set; }
+        public string HairColor { get; set; }
+        public string EyeColor { get; set; }
+        public string SpecialFeatures { get; set; }
+        public string CrimeType { get; set; }
+        public DateTime CrimeDate { get; set; }
+        public string CrimePlace { get; set; }
+        public string CourtDecision { get; set; }
+        public bool CriminalGroups { get; set; }
+        public System.Drawing.Image Photo { get; set; }
+        public List<InfoCriminal> Criminals { get; set; }
 
         public InfoCriminal()
         {
-            Спільники = new List<InfoCriminal>();
+            Criminals = new List<InfoCriminal>();
         }
 
         public override string ToString()
         {
-            return $"{Name} {Прізвище} ({Кличка})";
+            return $"{FirstName} {LastName}";
         }
     }
 }
