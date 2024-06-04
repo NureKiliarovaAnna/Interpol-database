@@ -28,7 +28,6 @@ namespace MainForm.Models
                 BinaryFormatter formatter = new BinaryFormatter();
                 formatter.Serialize(fs, criminals);
             }
-        }
 
         public List<InfoCriminal> LoadArchive()
         {

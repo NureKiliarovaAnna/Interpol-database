@@ -65,17 +65,6 @@ namespace MainForm.Forms
                 return;
             }
 
-            var existingCriminal = archive.Criminals.Find(c =>
-                c.FirstName.Trim().Equals(txtFirstName.Text.Trim(), StringComparison.OrdinalIgnoreCase) &&
-                c.LastName.Trim().Equals(txtLastName.Text.Trim(), StringComparison.OrdinalIgnoreCase) &&
-                c.BirthDate.Date == dtpBirthDate.Value.Date);
-
-            if (existingCriminal != null)
-            {
-                MessageBox.Show("Злочинець з такими даними вже існує в архіві.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
             var newCriminal = new InfoCriminal
             {
                 FirstName = txtFirstName.Text,

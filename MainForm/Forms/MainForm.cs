@@ -98,7 +98,6 @@ namespace MainForm
                 loginForm.Show();
                 Hide();
             }
-        }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -26,14 +26,8 @@ namespace MainForm.Models
         public DateTime CrimeDate { get; set; }
         public string CrimePlace { get; set; }
         public string CourtDecision { get; set; }
-        public bool CriminalGroups { get; set; }
         public System.Drawing.Image Photo { get; set; }
         public List<InfoCriminal> Criminals { get; set; }
-
-        public InfoCriminal()
-        {
-            Criminals = new List<InfoCriminal>();
-        }
 
         public override string ToString()
         {
