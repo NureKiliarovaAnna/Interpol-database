@@ -1,4 +1,4 @@
-﻿namespace MainForm.Forms
+﻿namespace Interpol.Forms
 {
     partial class LoginForm
     {
@@ -73,7 +73,8 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::MainForm.Properties.Resources._8666758_unlock_lock_icon;
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox3.Image = global::Interpol.Properties.Resources._8666758_unlock_lock_icon2;
             this.pictureBox3.Location = new System.Drawing.Point(206, 220);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(27, 27);
@@ -83,7 +84,8 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::MainForm.Properties.Resources._8666609_user_icon;
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox2.Image = global::Interpol.Properties.Resources._8666609_user_icon2;
             this.pictureBox2.Location = new System.Drawing.Point(206, 180);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(27, 27);
@@ -93,7 +95,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::MainForm.Properties.Resources.interpol_logo_blue_0;
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = global::Interpol.Properties.Resources.imageedit_1_84346824652;
             this.pictureBox1.Location = new System.Drawing.Point(250, 66);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 87);
@@ -115,7 +118,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(720, 540);
             this.Name = "LoginForm";
-            this.Text = "Аутентифікація";
+            this.Text = "Авторизація";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

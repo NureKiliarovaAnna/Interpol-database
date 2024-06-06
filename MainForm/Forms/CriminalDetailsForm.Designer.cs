@@ -1,4 +1,4 @@
-﻿namespace MainForm.Forms
+﻿namespace Interpol.Forms
 {
     partial class CriminalDetailsForm
     {

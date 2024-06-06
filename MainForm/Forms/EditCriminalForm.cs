@@ -1,4 +1,4 @@
-﻿using MainForm.Models;
+﻿using Interpol.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,14 +9,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MainForm.Forms
+namespace Interpol.Forms
 {
     public partial class EditCriminalForm : Form
     {
-        private InfoCriminal criminal;
+        private Criminal criminal;
+
         private Archive archive;
 
-        public EditCriminalForm(InfoCriminal criminal, Archive archive)
+        private string PhotoFileName = "";
+
+        public EditCriminalForm(Criminal criminal, Archive archive)
         {
             InitializeComponent();
             this.criminal = criminal;
@@ -44,7 +47,8 @@ namespace MainForm.Forms
             dtpCrimeDateEdit.Value = criminal.CrimeDate;
             txtCrimePlaceEdit.Text = criminal.CrimePlace;
             txtCourtDecisionEdit.Text = criminal.CourtDecision;
-            pictureBoxPhotoEdit.Image = criminal.Photo;
+            pictureBoxPhotoEdit.Image = Image.FromFile(criminal.PhotoPath);
+            PhotoFileName = criminal.PhotoPath;
 
             cmbGenderEdit.DropDownStyle = ComboBoxStyle.DropDown;
             cmbHairColorEdit.DropDownStyle = ComboBoxStyle.DropDown;
@@ -63,14 +67,20 @@ namespace MainForm.Forms
             txtLastResidenceEdit.TextChanged += new EventHandler(FieldChanged);
             txtCitizenshipEdit.TextChanged += new EventHandler(FieldChanged);
             txtHeightEdit.TextChanged += new EventHandler(FieldChanged);
-            cmbHairColorEdit.SelectedIndexChanged += new EventHandler(FieldChanged);
-            cmbEyeColorEdit.SelectedIndexChanged += new EventHandler(FieldChanged);
-            txtSpecialFeaturesEdit.TextChanged += new EventHandler(FieldChanged);
-            cmbCrimeTypeEdit.SelectedIndexChanged += new EventHandler(FieldChanged);
+            cmbHairColorEdit.SelectedIndexChanged += new EventHandler(
+                FieldChanged);
+            cmbEyeColorEdit.SelectedIndexChanged += new EventHandler(
+                FieldChanged);
+            txtSpecialFeaturesEdit.TextChanged += new EventHandler(
+                FieldChanged);
+            cmbCrimeTypeEdit.SelectedIndexChanged += new EventHandler(
+                FieldChanged);
             dtpCrimeDateEdit.ValueChanged += new EventHandler(FieldChanged);
             txtCrimePlaceEdit.TextChanged += new EventHandler(FieldChanged);
-            txtCourtDecisionEdit.TextChanged += new EventHandler(FieldChanged);
-            pictureBoxPhotoEdit.BackgroundImageChanged += new EventHandler(FieldChanged);
+            txtCourtDecisionEdit.TextChanged += new EventHandler(
+                FieldChanged);
+            pictureBoxPhotoEdit.BackgroundImageChanged += new EventHandler(
+                FieldChanged);
         }
 
         private void FieldChanged(object sender, EventArgs e)
@@ -95,7 +105,8 @@ namespace MainForm.Forms
                 openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    pictureBoxPhotoEdit.Image = Image.FromFile(openFileDialog.FileName);
+                    pictureBoxPhotoEdit.Image = Image.FromFile(
+                        openFileDialog.FileName);
                     pictureBoxPhotoEdit.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
@@ -120,15 +131,17 @@ namespace MainForm.Forms
                 criminal.CrimeType = cmbCrimeTypeEdit.Text;
                 criminal.CrimePlace = txtCrimePlaceEdit.Text;
                 criminal.CourtDecision = txtCourtDecisionEdit.Text;
-                criminal.Photo = pictureBoxPhotoEdit.Image;
+                criminal.PhotoPath = PhotoFileName;
 
-                archive.SaveArchive(archive.Criminals);
-                MessageBox.Show("Дані змінено.", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                archive.SaveArchive();
+                MessageBox.Show("Дані змінено.", "Успіх", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             else
             {
-                MessageBox.Show("Усі поля обов'язкові для заповнення.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Усі поля обов'язкові для заповнення.", 
+                    "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -158,6 +171,32 @@ namespace MainForm.Forms
             }
 
             return true;
+        }
+
+        private void OnlyDigit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Delete)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void OnlyLetter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Delete)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void OnlyLetterOrHyphenOrSpace_KeyPress(object sender, 
+            KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) && e.KeyChar != '-' && 
+                e.KeyChar != ' ' && e.KeyChar != (char)Keys.Delete)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

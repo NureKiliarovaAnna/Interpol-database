@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MainForm.Properties {
+namespace Interpol.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace MainForm.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MainForm.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Interpol.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,9 @@ namespace MainForm.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _8666609_user_icon {
+        internal static System.Drawing.Bitmap _8666609_user_icon2 {
             get {
-                object obj = ResourceManager.GetObject("8666609_user_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("8666609_user_icon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace MainForm.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _8666758_unlock_lock_icon {
+        internal static System.Drawing.Bitmap _8666758_unlock_lock_icon2 {
             get {
-                object obj = ResourceManager.GetObject("8666758_unlock_lock_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("8666758_unlock_lock_icon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace MainForm.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap interpol_logo_blue_0 {
+        internal static System.Drawing.Bitmap imageedit_1_84346824652 {
             get {
-                object obj = ResourceManager.GetObject("interpol_logo_blue_0", resourceCulture);
+                object obj = ResourceManager.GetObject("imageedit_1_84346824652", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace MainForm
+namespace Interpol
 {
     partial class MainForm
     {
@@ -34,6 +34,15 @@ namespace MainForm
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnHome = new System.Windows.Forms.LinkLabel();
@@ -75,6 +84,7 @@ namespace MainForm
             this.lstCriminals = new System.Windows.Forms.ListBox();
             this.AddCriminalForm = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.pnlTop.SuspendLayout();
             this.pnlFilters.SuspendLayout();
             this.SuspendLayout();
@@ -83,11 +93,12 @@ namespace MainForm
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(782, 92);
+            this.panel1.Size = new System.Drawing.Size(912, 92);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -103,6 +114,80 @@ namespace MainForm
             this.label1.Text = "Interpol";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.optionsToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(912, 28);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Text = "&File";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(134, 26);
+            this.exitToolStripMenuItem.Text = "&Вийти";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // optionsToolStripMenuItem
+            // 
+            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.optionsToolStripMenuItem.Text = "&Options";
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.addToolStripMenuItem.Text = "Додати";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.btnAddCriminal_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.editToolStripMenuItem.Text = "Редагувати";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.deleteToolStripMenuItem.Text = "Видалити";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.helpToolStripMenuItem.Text = "He&lp";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.aboutToolStripMenuItem.Text = "&Про програму...";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -111,7 +196,7 @@ namespace MainForm
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 92);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(782, 39);
+            this.pnlTop.Size = new System.Drawing.Size(912, 39);
             this.pnlTop.TabIndex = 0;
             // 
             // linkLabel1
@@ -125,11 +210,11 @@ namespace MainForm
             this.linkLabel1.ForeColor = System.Drawing.Color.Black;
             this.linkLabel1.LinkArea = new System.Windows.Forms.LinkArea(0, 0);
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(691, 10);
+            this.linkLabel1.Location = new System.Drawing.Point(731, 10);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(69, 20);
+            this.linkLabel1.Size = new System.Drawing.Size(159, 20);
             this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.Text = "LogOut";
+            this.linkLabel1.Text = "Вийти з акаунту";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Black;
             this.linkLabel1.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
@@ -145,9 +230,9 @@ namespace MainForm
             this.btnHome.LinkColor = System.Drawing.Color.Black;
             this.btnHome.Location = new System.Drawing.Point(19, 10);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(49, 20);
+            this.btnHome.Size = new System.Drawing.Size(79, 20);
             this.btnHome.TabIndex = 0;
-            this.btnHome.Text = "HOME";
+            this.btnHome.Text = "Головна";
             this.btnHome.VisitedLinkColor = System.Drawing.Color.Black;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
@@ -261,6 +346,7 @@ namespace MainForm
             this.txtAgeToFilter.Name = "txtAgeToFilter";
             this.txtAgeToFilter.Size = new System.Drawing.Size(53, 27);
             this.txtAgeToFilter.TabIndex = 7;
+            this.txtAgeToFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyDigit_KeyPress);
             // 
             // txtHeightToFilter
             // 
@@ -269,6 +355,7 @@ namespace MainForm
             this.txtHeightToFilter.Name = "txtHeightToFilter";
             this.txtHeightToFilter.Size = new System.Drawing.Size(53, 27);
             this.txtHeightToFilter.TabIndex = 11;
+            this.txtHeightToFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyDigit_KeyPress);
             // 
             // txtAgeFromFilter
             // 
@@ -277,6 +364,7 @@ namespace MainForm
             this.txtAgeFromFilter.Name = "txtAgeFromFilter";
             this.txtAgeFromFilter.Size = new System.Drawing.Size(53, 27);
             this.txtAgeFromFilter.TabIndex = 6;
+            this.txtAgeFromFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyDigit_KeyPress);
             // 
             // label17
             // 
@@ -387,6 +475,7 @@ namespace MainForm
             this.txtCrimePlaceFilter.Name = "txtCrimePlaceFilter";
             this.txtCrimePlaceFilter.Size = new System.Drawing.Size(285, 27);
             this.txtCrimePlaceFilter.TabIndex = 16;
+            this.txtCrimePlaceFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetterOrHyphenOrSpace_KeyPress);
             // 
             // dtpCrimeDateFilter
             // 
@@ -421,6 +510,7 @@ namespace MainForm
             this.cmbCrimeTypeFilter.Name = "cmbCrimeTypeFilter";
             this.cmbCrimeTypeFilter.Size = new System.Drawing.Size(285, 28);
             this.cmbCrimeTypeFilter.TabIndex = 14;
+            this.cmbCrimeTypeFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetterOrHyphenOrSpace_KeyPress);
             // 
             // cmbEyeColorFilter
             // 
@@ -436,6 +526,7 @@ namespace MainForm
             this.cmbEyeColorFilter.Name = "cmbEyeColorFilter";
             this.cmbEyeColorFilter.Size = new System.Drawing.Size(285, 28);
             this.cmbEyeColorFilter.TabIndex = 13;
+            this.cmbEyeColorFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetter_KeyPress);
             // 
             // cmbHairColorFilter
             // 
@@ -452,6 +543,7 @@ namespace MainForm
             this.cmbHairColorFilter.Name = "cmbHairColorFilter";
             this.cmbHairColorFilter.Size = new System.Drawing.Size(285, 28);
             this.cmbHairColorFilter.TabIndex = 12;
+            this.cmbHairColorFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetter_KeyPress);
             // 
             // txtHeightFromFilter
             // 
@@ -460,6 +552,7 @@ namespace MainForm
             this.txtHeightFromFilter.Name = "txtHeightFromFilter";
             this.txtHeightFromFilter.Size = new System.Drawing.Size(53, 27);
             this.txtHeightFromFilter.TabIndex = 10;
+            this.txtHeightFromFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyDigit_KeyPress);
             // 
             // txtCitizenshipFilter
             // 
@@ -468,6 +561,7 @@ namespace MainForm
             this.txtCitizenshipFilter.Name = "txtCitizenshipFilter";
             this.txtCitizenshipFilter.Size = new System.Drawing.Size(285, 27);
             this.txtCitizenshipFilter.TabIndex = 9;
+            this.txtCitizenshipFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetterOrHyphenOrSpace_KeyPress);
             // 
             // txtBirthPlaceFilter
             // 
@@ -476,6 +570,7 @@ namespace MainForm
             this.txtBirthPlaceFilter.Name = "txtBirthPlaceFilter";
             this.txtBirthPlaceFilter.Size = new System.Drawing.Size(285, 27);
             this.txtBirthPlaceFilter.TabIndex = 8;
+            this.txtBirthPlaceFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetterOrHyphenOrSpace_KeyPress);
             // 
             // cmbGenderFilter
             // 
@@ -488,6 +583,7 @@ namespace MainForm
             this.cmbGenderFilter.Name = "cmbGenderFilter";
             this.cmbGenderFilter.Size = new System.Drawing.Size(285, 28);
             this.cmbGenderFilter.TabIndex = 5;
+            this.cmbGenderFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetter_KeyPress);
             // 
             // label4
             // 
@@ -526,6 +622,7 @@ namespace MainForm
             this.txtNicknameFilter.Name = "txtNicknameFilter";
             this.txtNicknameFilter.Size = new System.Drawing.Size(285, 27);
             this.txtNicknameFilter.TabIndex = 4;
+            this.txtNicknameFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetterOrHyphenOrSpace_KeyPress);
             // 
             // txtLastNameFilter
             // 
@@ -534,6 +631,7 @@ namespace MainForm
             this.txtLastNameFilter.Name = "txtLastNameFilter";
             this.txtLastNameFilter.Size = new System.Drawing.Size(285, 27);
             this.txtLastNameFilter.TabIndex = 3;
+            this.txtLastNameFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetterOrHyphenOrSpace_KeyPress);
             // 
             // txtFirstNameFilter
             // 
@@ -542,6 +640,7 @@ namespace MainForm
             this.txtFirstNameFilter.Name = "txtFirstNameFilter";
             this.txtFirstNameFilter.Size = new System.Drawing.Size(285, 27);
             this.txtFirstNameFilter.TabIndex = 2;
+            this.txtFirstNameFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetterOrHyphenOrSpace_KeyPress);
             // 
             // lstCriminals
             // 
@@ -554,7 +653,7 @@ namespace MainForm
             this.lstCriminals.ItemHeight = 20;
             this.lstCriminals.Location = new System.Drawing.Point(485, 131);
             this.lstCriminals.Name = "lstCriminals";
-            this.lstCriminals.Size = new System.Drawing.Size(297, 504);
+            this.lstCriminals.Size = new System.Drawing.Size(432, 504);
             this.lstCriminals.TabIndex = 18;
             this.lstCriminals.DoubleClick += new System.EventHandler(this.lstCriminals_DoubleClick);
             // 
@@ -562,7 +661,7 @@ namespace MainForm
             // 
             this.AddCriminalForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.AddCriminalForm.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddCriminalForm.Location = new System.Drawing.Point(656, 651);
+            this.AddCriminalForm.Location = new System.Drawing.Point(786, 651);
             this.AddCriminalForm.Name = "AddCriminalForm";
             this.AddCriminalForm.Size = new System.Drawing.Size(110, 30);
             this.AddCriminalForm.TabIndex = 19;
@@ -574,18 +673,21 @@ namespace MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 693);
+            this.ClientSize = new System.Drawing.Size(912, 693);
             this.Controls.Add(this.AddCriminalForm);
             this.Controls.Add(this.lstCriminals);
             this.Controls.Add(this.pnlFilters);
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(800, 740);
+            this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(930, 740);
             this.Name = "MainForm";
-            this.Text = "Головна";
+            this.Text = "Головна сторінка";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
             this.pnlFilters.ResumeLayout(false);
@@ -638,5 +740,14 @@ namespace MainForm
         private LinkLabel btnHome;
         private LinkLabel linkLabel1;
         private Button btnClear;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem helpToolStripMenuItem;
+        private ToolStripMenuItem aboutToolStripMenuItem;
+        private ToolStripMenuItem optionsToolStripMenuItem;
+        private ToolStripMenuItem addToolStripMenuItem;
+        private ToolStripMenuItem editToolStripMenuItem;
+        private ToolStripMenuItem deleteToolStripMenuItem;
     }
 }

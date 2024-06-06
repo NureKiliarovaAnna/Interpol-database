@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MainForm.Forms
+namespace Interpol.Forms
 {
     public partial class LoginForm : Form
     {
@@ -22,12 +22,13 @@ namespace MainForm.Forms
 
         private void CheckLoginButtonState(object sender, EventArgs e)
         {
-            btnLogin.Enabled = !string.IsNullOrEmpty(txtUsername.Text) && !string.IsNullOrEmpty(txtPassword.Text);
+            btnLogin.Enabled = !string.IsNullOrEmpty(txtUsername.Text) 
+                && !string.IsNullOrEmpty(txtPassword.Text);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "admin" && txtPassword.Text == "password")
+            if (txtUsername.Text == "admin" && txtPassword.Text == "1234")
             {
                 MainForm mainForm = new MainForm();
                 mainForm.Show();

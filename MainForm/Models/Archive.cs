@@ -1,49 +1,47 @@
-﻿using MainForm.Forms;
+﻿using Interpol.Forms;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MainForm.Models
+// Клас містить список усіх злочинців з даними
+
+namespace Interpol.Models
 {
     public class Archive
     {
-        public List<InfoCriminal> Criminals { get; set; }
+        [JsonInclude]
+
+        public List<Criminal> Criminals { get; set; }
 
         public Archive()
         {
-            Criminals = new List<InfoCriminal>();
+            Criminals = new List<Criminal>();
+        }
+
+        public Archive(List<Criminal> criminals)
+        {
+            Criminals = criminals;
         }
 
         private const string FileName = "archive.json";
 
-        public void SaveArchive(List<InfoCriminal> criminals)
+        public void SaveArchive()
         {
-            using (FileStream fs = new FileStream(FileName, FileMode.Create))
-            {
-                BinaryFormatter formatter = new BinaryFormatter();
-                formatter.Serialize(fs, criminals);
-            }
+            var jsonString = JsonSerializer.Serialize(this);
+            File.WriteAllText(FileName, jsonString);
+        }
 
-        public List<InfoCriminal> LoadArchive()
+        public static Archive LoadArchive()
         {
-            if (File.Exists(FileName))
-            {
-                using (FileStream fs = new FileStream(FileName, FileMode.Open))
-                {
-                    BinaryFormatter formatter = new BinaryFormatter();
-                    Criminals = (List<InfoCriminal>)formatter.Deserialize(fs);
-                    return Criminals;
-                }
-            }
-            else
-            {
-                return new List<InfoCriminal>();
-            }
+            var jsonString = File.ReadAllText(FileName);
+            return JsonSerializer.Deserialize<Archive>(jsonString);
         }
     }
 }

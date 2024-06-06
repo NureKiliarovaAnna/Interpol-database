@@ -1,4 +1,4 @@
-﻿using MainForm.Models;
+﻿using Interpol.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,14 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MainForm.Forms
+namespace Interpol.Forms
 {
     public partial class CriminalDetailsForm : Form
     {
-        private InfoCriminal criminal;
+        private Criminal criminal;
+
         private Archive archive;
 
-        public CriminalDetailsForm(InfoCriminal criminal, Archive archive)
+        public CriminalDetailsForm(Criminal criminal, Archive archive)
         {
             InitializeComponent();
             this.criminal = criminal;
@@ -42,7 +43,7 @@ namespace MainForm.Forms
             lblCrimeDate.Text = criminal.CrimeDate.ToShortDateString();
             lblCrimePlace.Text = criminal.CrimePlace;
             lblCourtDecision.Text = criminal.CourtDecision;
-            pictureBoxPhoto.Image = criminal.Photo;
+            pictureBoxPhoto.Image = Image.FromFile(criminal.PhotoPath);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -52,19 +53,23 @@ namespace MainForm.Forms
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            EditCriminalForm editForm = new EditCriminalForm(criminal, archive);
+            EditCriminalForm editForm = new EditCriminalForm(criminal, 
+                archive);
             editForm.ShowDialog();
             DisplayCriminalDetails();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Ви впевнені, що хочете видалити цього злочинця?", "Підтвердження", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var result = MessageBox.Show("Ви впевнені, що хочете видалити " +
+                "цього злочинця?", "Підтвердження", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 archive.Criminals.Remove(criminal);
-                archive.SaveArchive(archive.Criminals);
-                MessageBox.Show("Злочинця видалено.", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                archive.SaveArchive();
+                MessageBox.Show("Злочинця видалено.", "Успіх", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
         }

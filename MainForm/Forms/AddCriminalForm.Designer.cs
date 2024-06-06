@@ -1,4 +1,4 @@
-﻿namespace MainForm.Forms
+﻿namespace Interpol.Forms
 {
     partial class AddCriminalForm
     {
@@ -75,6 +75,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(285, 27);
             this.txtFirstName.TabIndex = 0;
+            this.txtFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetterOrHyphenOrSpace_KeyPress);
             // 
             // txtLastName
             // 
@@ -83,6 +84,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(285, 27);
             this.txtLastName.TabIndex = 1;
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetterOrHyphenOrSpace_KeyPress);
             // 
             // txtNickname
             // 
@@ -91,6 +93,7 @@
             this.txtNickname.Name = "txtNickname";
             this.txtNickname.Size = new System.Drawing.Size(285, 27);
             this.txtNickname.TabIndex = 2;
+            this.txtNickname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetterOrHyphenOrSpace_KeyPress);
             // 
             // cmbGender
             // 
@@ -103,6 +106,7 @@
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(285, 28);
             this.cmbGender.TabIndex = 3;
+            this.cmbGender.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetter_KeyPress);
             // 
             // dtpBirthDate
             // 
@@ -121,6 +125,7 @@
             this.txtBirthPlace.Name = "txtBirthPlace";
             this.txtBirthPlace.Size = new System.Drawing.Size(285, 27);
             this.txtBirthPlace.TabIndex = 5;
+            this.txtBirthPlace.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetterOrHyphenOrSpace_KeyPress);
             // 
             // txtLastResidence
             // 
@@ -129,6 +134,7 @@
             this.txtLastResidence.Name = "txtLastResidence";
             this.txtLastResidence.Size = new System.Drawing.Size(285, 27);
             this.txtLastResidence.TabIndex = 6;
+            this.txtLastResidence.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetterOrHyphenOrSpace_KeyPress);
             // 
             // txtCitizenship
             // 
@@ -137,6 +143,7 @@
             this.txtCitizenship.Name = "txtCitizenship";
             this.txtCitizenship.Size = new System.Drawing.Size(285, 27);
             this.txtCitizenship.TabIndex = 7;
+            this.txtCitizenship.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetterOrHyphenOrSpace_KeyPress);
             // 
             // txtHeight
             // 
@@ -145,6 +152,7 @@
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(285, 27);
             this.txtHeight.TabIndex = 8;
+            this.txtHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyDigit_KeyPress);
             // 
             // cmbHairColor
             // 
@@ -161,6 +169,7 @@
             this.cmbHairColor.Name = "cmbHairColor";
             this.cmbHairColor.Size = new System.Drawing.Size(285, 28);
             this.cmbHairColor.TabIndex = 9;
+            this.cmbHairColor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetter_KeyPress);
             // 
             // cmbEyeColor
             // 
@@ -176,6 +185,7 @@
             this.cmbEyeColor.Name = "cmbEyeColor";
             this.cmbEyeColor.Size = new System.Drawing.Size(285, 28);
             this.cmbEyeColor.TabIndex = 10;
+            this.cmbEyeColor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetter_KeyPress);
             // 
             // txtSpecialFeatures
             // 
@@ -208,6 +218,7 @@
             this.cmbCrimeType.Name = "cmbCrimeType";
             this.cmbCrimeType.Size = new System.Drawing.Size(285, 28);
             this.cmbCrimeType.TabIndex = 12;
+            this.cmbCrimeType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetterOrHyphenOrSpace_KeyPress);
             // 
             // dtpCrimeDate
             // 
@@ -225,6 +236,7 @@
             this.txtCrimePlace.Name = "txtCrimePlace";
             this.txtCrimePlace.Size = new System.Drawing.Size(285, 27);
             this.txtCrimePlace.TabIndex = 14;
+            this.txtCrimePlace.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetterOrHyphenOrSpace_KeyPress);
             // 
             // txtCourtDecision
             // 
@@ -233,6 +245,7 @@
             this.txtCourtDecision.Name = "txtCourtDecision";
             this.txtCourtDecision.Size = new System.Drawing.Size(285, 27);
             this.txtCourtDecision.TabIndex = 15;
+            this.txtCourtDecision.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetterOrHyphenOrSpace_KeyPress);
             // 
             // label2
             // 

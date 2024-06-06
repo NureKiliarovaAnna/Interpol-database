@@ -1,19 +1,22 @@
-﻿using MainForm.Models;
+﻿using Interpol.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MainForm.Forms
+namespace Interpol.Forms
 {
     public partial class AddCriminalForm : Form
     {
         private Archive archive;
+
+        private string PhotoFileName = "";
 
         public AddCriminalForm(Archive archive)
         {
@@ -33,8 +36,9 @@ namespace MainForm.Forms
             cmbEyeColor.TextChanged += new EventHandler(Field_TextChanged);
             cmbCrimeType.TextChanged += new EventHandler(Field_TextChanged);
             txtHeight.TextChanged += new EventHandler(Field_TextChanged);
-            pictureBoxPhoto.LoadCompleted += new AsyncCompletedEventHandler(Field_TextChanged);
-            btnAdd.Enabled = false; // Початковий стан кнопки - недоступний
+            pictureBoxPhoto.LoadCompleted += new AsyncCompletedEventHandler(
+                Field_TextChanged);
+            btnAdd.Enabled = false;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -49,6 +53,9 @@ namespace MainForm.Forms
                 openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
+                    FileInfo file = new FileInfo(openFileDialog.FileName);
+                    file.CopyTo(Guid.NewGuid().ToString() + "." + file.Extension);
+                    PhotoFileName = file.FullName;
                     pictureBoxPhoto.Image = Image.FromFile(openFileDialog.FileName);
                     pictureBoxPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
@@ -60,11 +67,12 @@ namespace MainForm.Forms
         {
             if (!IsFormValid())
             {
-                MessageBox.Show("Усі поля обов'язкові для заповнення.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Усі поля обов'язкові для заповнення.",
+                    "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            var newCriminal = new InfoCriminal
+            var newCriminal = new Criminal
             {
                 FirstName = txtFirstName.Text,
                 LastName = txtLastName.Text,
@@ -82,15 +90,15 @@ namespace MainForm.Forms
                 CrimeDate = dtpCrimeDate.Value,
                 CrimePlace = txtCrimePlace.Text,
                 CourtDecision = txtCourtDecision.Text,
-                Photo = pictureBoxPhoto.Image
+                PhotoPath = PhotoFileName
             };
 
-            List<InfoCriminal> criminals = archive.LoadArchive();
-            criminals.Add(newCriminal);
-            archive.SaveArchive(criminals);
-            archive.Criminals = criminals;
+            Archive archive = Archive.LoadArchive();
+            archive.Criminals.Add(newCriminal);
+            archive.SaveArchive();
 
-            MessageBox.Show("Злочинця додано до архіву.", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Злочинця додано до архіву.", "Успіх",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
 
@@ -124,6 +132,32 @@ namespace MainForm.Forms
         private void ValidateForm()
         {
             btnAdd.Enabled = IsFormValid();
+        }
+
+        private void OnlyDigit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Delete)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void OnlyLetter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Delete)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void OnlyLetterOrHyphenOrSpace_KeyPress(object sender, 
+            KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) && e.KeyChar != '-' && e.KeyChar
+                != ' ' && e.KeyChar != (char)Keys.Delete)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
