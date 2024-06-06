@@ -25,7 +25,6 @@ namespace MainForm.Forms
             cmbEyeColor.DropDownStyle = ComboBoxStyle.DropDown;
             cmbCrimeType.DropDownStyle = ComboBoxStyle.DropDown;
 
-            // Додавання обробників подій для всіх обов'язкових полів
             txtFirstName.TextChanged += new EventHandler(Field_TextChanged);
             txtLastName.TextChanged += new EventHandler(Field_TextChanged);
             dtpBirthDate.ValueChanged += new EventHandler(Field_TextChanged);

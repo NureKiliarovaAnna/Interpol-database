@@ -34,14 +34,10 @@ namespace MainForm
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Ви впевнені, що хочете вийти?", "Підтвердження", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
                 var loginForm = new LoginForm();
                 loginForm.Show();
                 this.Close();
             }
-        }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
