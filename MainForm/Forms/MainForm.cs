@@ -16,7 +16,6 @@ namespace MainForm
     public partial class MainForm : Form
     {
         private Archive archive;
-        private List<InfoCriminal> criminalsList;
 
         public MainForm()
         {
