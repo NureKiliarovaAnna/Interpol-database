@@ -16,7 +16,7 @@ namespace Interpol.Forms
     {
         private string PhotoFileName = "";
 
-        public AddCriminalForm(Archive archive)
+        public AddCriminalForm()
         {
             InitializeComponent();
 

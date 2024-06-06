@@ -62,7 +62,7 @@ namespace Interpol
 
         private void btnAddCriminal_Click(object sender, EventArgs e)
         {
-            AddCriminalForm addForm = new AddCriminalForm(archive);
+            AddCriminalForm addForm = new AddCriminalForm();
             addForm.ShowDialog();
             RefreshCriminalList();
         }
