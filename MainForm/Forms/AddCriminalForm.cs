@@ -14,14 +14,11 @@ namespace Interpol.Forms
 {
     public partial class AddCriminalForm : Form
     {
-        private Archive archive;
-
         private string PhotoFileName = "";
 
         public AddCriminalForm(Archive archive)
         {
             InitializeComponent();
-            this.archive = archive;
 
             cmbGender.DropDownStyle = ComboBoxStyle.DropDown;
             cmbHairColor.DropDownStyle = ComboBoxStyle.DropDown;
